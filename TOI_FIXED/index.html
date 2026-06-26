@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Environmental Awareness Registration Portal</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet" />
+
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ===================== LANDING PAGE ===================== -->
+  <section id="landing-page" class="page active">
+
+    <!-- Navbar -->
+    <nav class="navbar">
+      <div class="nav-brand">
+        <i class="fas fa-leaf nav-icon"></i>
+        <span>EcoAware</span>
+      </div>
+      <div class="nav-badge">Community Development Project</div>
+    </nav>
+
+    <!-- Hero Section -->
+    <main class="hero">
+
+      <!-- Animated background blobs -->
+      <div class="blob blob-1"></div>
+      <div class="blob blob-2"></div>
+      <div class="blob blob-3"></div>
+
+      <div class="hero-content">
+        <div class="hero-tag">
+          <i class="fas fa-seedling"></i>
+          University Community Initiative
+        </div>
+
+        <h1 class="hero-title">
+          Environmental<br />
+          <span class="highlight">Awareness</span><br />
+          Campaign
+        </h1>
+
+        <p class="hero-description">
+          Join thousands of students taking a stand for our planet. Fill in your details carefully — your participation helps us build a greener, more aware tomorrow. Every student's voice matters in this journey.
+        </p>
+
+        <div class="hero-stats">
+          <div class="stat">
+            <span class="stat-number">280+</span>
+            <span class="stat-label">Students</span>
+          </div>
+          <div class="stat-divider"></div>
+          <div class="stat">
+            <span class="stat-number">1</span>
+            <span class="stat-label">Mission</span>
+          </div>
+          <div class="stat-divider"></div>
+          <div class="stat">
+            <span class="stat-number">∞</span>
+            <span class="stat-label">Impact</span>
+          </div>
+        </div>
+
+        <button class="btn-primary" onclick="showPage('form-page')">
+          <span>Start Registration</span>
+          <i class="fas fa-arrow-right btn-icon"></i>
+        </button>
+
+        <p class="hero-note">
+          <i class="fas fa-shield-alt"></i>
+          Your data is securely stored. Takes less than 2 minutes.
+        </p>
+      </div>
+
+      <!-- Hero Image / Illustration -->
+      <div class="hero-visual">
+        <div class="visual-card glass">
+          <div class="visual-icon-ring">
+            <i class="fas fa-globe-asia visual-globe"></i>
+          </div>
+          <div class="visual-features">
+            <div class="visual-feature">
+              <i class="fas fa-check-circle"></i>
+              <span>Easy Registration</span>
+            </div>
+            <div class="visual-feature">
+              <i class="fas fa-check-circle"></i>
+              <span>Instant Submission</span>
+            </div>
+            <div class="visual-feature">
+              <i class="fas fa-check-circle"></i>
+              <span>Secure &amp; Private</span>
+            </div>
+            <div class="visual-feature">
+              <i class="fas fa-check-circle"></i>
+              <span>Mobile Friendly</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <p>
+        <i class="fas fa-leaf footer-leaf"></i>
+        Made with purpose for the
+        <strong>Environmental Awareness Campaign</strong>
+        &nbsp;|&nbsp; University Community Development Project
+      </p>
+    </footer>
+
+  </section>
+
+
+  <!-- ===================== FORM PAGE ===================== -->
+  <section id="form-page" class="page">
+
+    <!-- Back Button -->
+    <div class="form-topbar">
+      <button class="btn-back" onclick="showPage('landing-page')">
+        <i class="fas fa-arrow-left"></i> Back
+      </button>
+      <div class="form-topbar-brand">
+        <i class="fas fa-leaf"></i> EcoAware
+      </div>
+    </div>
+
+    <!-- Form Container -->
+    <div class="form-wrapper">
+      <div class="form-card glass">
+
+        <!-- Form Header -->
+        <div class="form-header">
+          <div class="form-header-icon">
+            <i class="fas fa-user-plus"></i>
+          </div>
+          <h2 class="form-title">Student Registration</h2>
+          <p class="form-subtitle">
+            Fill in your details below. Fields marked with
+            <span class="required-star">*</span> are required.
+          </p>
+        </div>
+
+        <!-- The Form -->
+        <form id="registrationForm" novalidate>
+
+          <!-- === REQUIRED FIELDS === -->
+          <div class="form-section-label">
+            <i class="fas fa-user"></i> Personal Information
+          </div>
+
+          <!-- Student Name -->
+          <div class="form-group">
+            <label for="studentName">
+              Student Name <span class="required-star">*</span>
+            </label>
+            <div class="input-wrapper">
+              <i class="fas fa-user input-icon"></i>
+              <input
+                type="text"
+                id="studentName"
+                name="studentName"
+                placeholder="Enter your full name"
+                autocomplete="name"
+              />
+            </div>
+            <span class="error-msg" id="error-studentName"></span>
+          </div>
+
+          <!-- Class -->
+          <div class="form-group">
+            <label for="studentClass">
+              Class <span class="required-star">*</span>
+            </label>
+            <div class="input-wrapper">
+              <i class="fas fa-graduation-cap input-icon"></i>
+              <input
+                type="text"
+                id="studentClass"
+                name="studentClass"
+                placeholder="e.g. 10th, 11th, 12th"
+              />
+            </div>
+            <span class="error-msg" id="error-studentClass"></span>
+          </div>
+
+          <!-- School Name -->
+          <div class="form-group">
+            <label for="schoolName">
+              School Name <span class="required-star">*</span>
+            </label>
+            <div class="input-wrapper">
+              <i class="fas fa-school input-icon"></i>
+              <input
+                type="text"
+                id="schoolName"
+                name="schoolName"
+                placeholder="Enter your school name"
+              />
+            </div>
+            <span class="error-msg" id="error-schoolName"></span>
+          </div>
+
+          <!-- City -->
+          <div class="form-group">
+            <label for="city">
+              City <span class="required-star">*</span>
+            </label>
+            <div class="input-wrapper">
+              <i class="fas fa-city input-icon"></i>
+              <input
+                type="text"
+                id="city"
+                name="city"
+                placeholder="Enter your city"
+              />
+            </div>
+            <span class="error-msg" id="error-city"></span>
+          </div>
+
+          <!-- State -->
+          <div class="form-group">
+            <label for="state">
+              State <span class="required-star">*</span>
+            </label>
+            <div class="input-wrapper">
+              <i class="fas fa-map-marker-alt input-icon"></i>
+              <input
+                type="text"
+                id="state"
+                name="state"
+                placeholder="Enter your state"
+              />
+            </div>
+            <span class="error-msg" id="error-state"></span>
+          </div>
+
+          <!-- === OPTIONAL FIELDS === -->
+          <div class="form-section-label optional-label">
+            <i class="fas fa-plus-circle"></i> Optional Information
+          </div>
+
+          <!-- Parent Name -->
+          <div class="form-group">
+            <label for="parentName">
+              Parent / Guardian Name
+              <span class="optional-badge">Optional</span>
+            </label>
+            <div class="input-wrapper">
+              <i class="fas fa-user-friends input-icon"></i>
+              <input
+                type="text"
+                id="parentName"
+                name="parentName"
+                placeholder="Enter parent or guardian name"
+                autocomplete="off"
+              />
+            </div>
+          </div>
+
+          <!-- Instagram ID -->
+          <div class="form-group">
+            <label for="instagramId">
+              Instagram ID
+              <span class="optional-badge">Optional</span>
+            </label>
+            <div class="input-wrapper">
+              <i class="fab fa-instagram input-icon"></i>
+              <input
+                type="text"
+                id="instagramId"
+                name="instagramId"
+                placeholder="@yourusername"
+                autocomplete="off"
+              />
+            </div>
+            <span class="error-msg" id="error-instagramId"></span>
+          </div>
+
+          <!-- Global Error Banner -->
+          <div id="form-error-banner" class="form-error-banner hidden">
+            <i class="fas fa-exclamation-circle"></i>
+            <span id="form-error-text">Something went wrong. Please try again.</span>
+          </div>
+
+          <!-- Submit Button -->
+          <button type="submit" id="submitBtn" class="btn-submit">
+            <span id="submitBtnText">
+              <i class="fas fa-paper-plane"></i> Submit Registration
+            </span>
+            <span id="submitSpinner" class="spinner hidden">
+              <i class="fas fa-circle-notch fa-spin"></i> Submitting...
+            </span>
+          </button>
+
+        </form>
+      </div>
+    </div>
+
+    <!-- Form Footer -->
+    <footer class="footer form-footer">
+      <p>
+        <i class="fas fa-lock"></i>
+        Your data is safe &amp; will only be used for the Environmental Awareness Campaign.
+      </p>
+    </footer>
+
+  </section>
+
+
+  <!-- ===================== SUCCESS PAGE ===================== -->
+  <section id="success-page" class="page">
+
+    <div class="success-wrapper">
+      <div class="success-card glass">
+
+        <!-- Animated checkmark -->
+        <div class="success-icon-wrapper">
+          <div class="success-circle">
+            <i class="fas fa-check success-check"></i>
+          </div>
+          <div class="success-ring ring-1"></div>
+          <div class="success-ring ring-2"></div>
+        </div>
+
+        <h2 class="success-title">Thank You!</h2>
+        <p class="success-message">
+          Your details have been submitted successfully.
+        </p>
+        <p class="success-submessage">
+          Welcome to the <strong>Environmental Awareness Campaign</strong>. You're now part of a movement making a real difference. 🌿
+        </p>
+
+        <!-- Next Step -->
+        <div class="success-next">
+          <p class="success-next-label">
+            <i class="fas fa-arrow-down"></i> Next Step
+          </p>
+          <a id="quizBtn" href="#" target="_blank" rel="noopener noreferrer" class="btn-quiz">
+            <i class="fas fa-pencil-alt"></i>
+            Register for TCTC Quiz
+          </a>
+          <p class="quiz-note">Opens in a new tab</p>
+        </div>
+
+        <!-- Register another -->
+        <button class="btn-register-another" onclick="resetForm()">
+          <i class="fas fa-user-plus"></i> Register Another Student
+        </button>
+
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <p>
+        <i class="fas fa-leaf footer-leaf"></i>
+        Environmental Awareness Campaign &nbsp;|&nbsp; University Community Development Project
+      </p>
+    </footer>
+
+  </section>
+
+
+  <!-- Main JavaScript -->
+  <script src="script.js"></script>
+
+</body>
+</html>
