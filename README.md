@@ -6,7 +6,7 @@
 
 ## 🔥 Live Demo
 
-🌐 **[View Live Site →]( )**
+🌐 **[View Live Site →](https://abhaycodes-sphere.github.io/environmental-awareness-registration-portal/ )**
  
 ---
 
